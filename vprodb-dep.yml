@@ -29,11 +29,14 @@ spec:
             secretKeyRef:
               name: app-secret
               key: db-pass
+     nodeSelector:
+        zone: us-east-2a
       volumes:
-      - name: vpro-db-data
-        hostPath:
-          path: /data
-          type: DirectoryOrCreate
+        - name: vpro-db-data
+          # This AWS EBS volume must already exist.
+          awsElasticBlockStore:
+             volumeID: vol-0849c46c549277819
+             fsType: ext4
       initContainers:
       - name: busybox
         image: busybox:latest
