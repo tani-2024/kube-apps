@@ -20,6 +20,6 @@ This project aims to containerize a multi-tier web application stack on Kubernet
 5.  **Run kubectl apply**: Finally deploy your definitions files on Kubernetes cluster.
 
 ## Installation and Usage
-
-Include any installation instructions or guidelines for deploying the application stack on Kubernetes. Provide instructions on how to scale the application, manage resources, and access the deployed services.
+- Install AWSCLI on Virtual Machine
+- Install Kop binary file and move it to /usr/local/bin directory
 
